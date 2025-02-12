@@ -1,7 +1,6 @@
-import { useState, useEffect, useCallback } from "react";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { BsShare } from "react-icons/bs";
-import { FiDownload } from "react-icons/fi";
+
+"use client";
+
 import Img from "@/public/assets/car1.png";
 import Image from "next/image";
 
@@ -28,7 +27,7 @@ const ImageCarousel = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent">
           <div className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white p-8 w-1/2 space-y-4">
-            <h2 className="text-4xl md:text-5xl font-medium mb-4 font-serif shadow-lg text-[#CFA500]">
+            <h2 className="text-4xl md:text-5xl font-grandiflora mb-4 shadow-lg text-[#CFA500]">
               IMPECCABLE CRAFTSMANSHIP AND FINESSE
             </h2>
             <p className="w-[70%] break-words text-sm text-slate-300 shadow-md font-light tracking-wider">

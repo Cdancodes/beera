@@ -13,6 +13,9 @@ module.exports = {
         textColor: "#FFFFFF",
         footerColor: "#F6F4F2"
       },
+      fontFamily: {
+        grandiflora: ["Grandiflora One", "cursive"],
+      },
       keyframes: {
         wiggle: {
           "0%, 100%": { transform: "translateX(0)" },

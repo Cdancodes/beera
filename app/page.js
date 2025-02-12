@@ -12,12 +12,10 @@ import ImageBoard from './imageBoard/Page';
 const page = () => {
   return (
     <>
-      <Navbar />
       <Carousel />
       <ProductList />
       <Template />
       <ImageBoard />
-      <Footer />
     </>
   )
 }
