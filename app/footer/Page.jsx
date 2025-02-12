@@ -60,7 +60,7 @@ const Footer = () => {
             <nav className="list-none mb-10">
               <h2 className="title-font font-semibold text-goldMid tracking-widest text-md mb-3">MENU</h2>
               {NavItem?.map((item, i) => (
-                <li key={i} className="font-medium ">
+                <li key={i} className="font-medium">
                   <a className="text-gray-600 hover:scale-105 transition-transform duration-200 hover:text-goldMid cursor-pointer">{item.title}</a>
                 </li>
               ))}
@@ -70,7 +70,7 @@ const Footer = () => {
             <nav className="list-none mb-10">
               <h2 className="title-font font-semibold text-goldMid tracking-widest text-md mb-3">FOLLOW US ON</h2>
               {SocailIcons?.map((item, i) => (
-                <li key={i} className="font-medium ">
+                <li key={i} className="font-medium">
                   <a className="text-gray-600 hover:scale-105 transition-transform duration-200 hover:text-goldMid cursor-pointer">{item.title}</a>
                 </li>
               ))}
