@@ -6,9 +6,6 @@ import Image from "next/image";
 
 const ImageCarousel = () => {
 
-
-
-
   return (
     <div
       className="relative w-full group"

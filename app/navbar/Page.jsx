@@ -7,8 +7,10 @@ import Brand from "@/public/assets/brand.png";
 import Image from "next/image";
 import Header from "../header/Page";
 import { RxCross2 } from "react-icons/rx";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -16,12 +18,12 @@ const Navbar = () => {
   const navLinks = [
     { title: "Home", path: "/" },
     { title: "Necklaces", path: "/necklace" },
-    { title: "Bracelete", path: "#Bracelete" },
-    { title: "Rings", path: "#Rings" },
-    { title: "Earrings", path: "#Earrings" },
-    { title: "Ankle Bracelets", path: "#Ankle Bracelets" },
-    { title: "All", path: "#All" },
-    { title: "Track My Order", path: "#Track My Order" },
+    { title: "Bangles", path: "/bangles" },
+    { title: "Rings", path: "/ring" },
+    { title: "Earrings", path: "/earrings" },
+    { title: "Ankle Bracelets", path: "/ankle" },
+    { title: "All", path: "/all" },
+    { title: "Track My Order", path: "/order" },
   ];
 
   useEffect(() => {
@@ -62,7 +64,7 @@ const Navbar = () => {
       <Header />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-defaultColor">
         <div className="flex items-center justify-between h-16">
-          <div className="flex justify-center items-center flex-shrink-0">
+          <div onClick={()=>router.push("/")} className="flex justify-center items-center flex-shrink-0">
             <Image
               className="w-15 h-15"
               src={Brand}
