@@ -53,19 +53,30 @@ const Neckles = () => {
 
     return (
 
-        <div className='w-full mx-auto bg-defaultColor'>
+        <div className='w-full h-full mx-auto bg-defaultColor'>
 
-            <CarouselImg Img={carImg} />
+            <div className='w-full'>
+                <CarouselImg Img={carImg} />
+            </div>
 
-            <section className="text-gray-600 body-font w-full pb-24">
-                <div className="px-5 py-16 w-full flex flex-col md:flex-row">
-                    <div className="w-full md:w-1/4 p-4">
-                        <Accordion />
-                    </div>
-                    <div className="w-full md:w-3/4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">
-                        {images.map((item, index) => (
-                           <Card key={index} img={item.img} title={item.title} />
-                        ))}
+            <section className="w-full min-h-screen bg-defaultColor pb-16">
+                <div className="container mx-auto px-4 py-8">
+                    <div className="flex flex-col lg:flex-row gap-8">
+                        {/* Sidebar */}
+                        <div className="w-full lg:w-1/4">
+                            <div className="sticky top-4">
+                                <Accordion />
+                            </div>
+                        </div>
+
+                        {/* Main Content */}
+                        <div className="w-full lg:w-3/4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                                {images.map((item, index) => (
+                                    <Card key={index} img={item.img} title={item.title} />
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

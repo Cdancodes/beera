@@ -6,6 +6,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '480px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+        'laptop': '1366px',
+        'desktop': '1600px',
+      },
       colors: {
         goldDark: "#695400",
         goldMid: "#CFA500",
@@ -14,7 +24,7 @@ module.exports = {
         footerColor: "#F6F4F2"
       },
       fontFamily: {
-        grandiflora: ["Grandiflora One", "cursive"],
+        grandiflora: ["Grandiflora One"],
       },
       keyframes: {
         wiggle: {

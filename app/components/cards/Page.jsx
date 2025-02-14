@@ -1,23 +1,23 @@
 
-"use client"
+// "use client"
 
 import Image from 'next/image';
 import React from 'react';
 
 const Page = ({ img, title }) => {
     return (
-        <div className="lg:w-[280px] bg-goldDark md:w-1/2 p-1 w-full hover:scale-105 transition-transform duration-200 hover:shadow-xl m-2">
-            <a className="block relative h-50 rounded overflow-hidden">
+        <div className="w-full bg-goldDark p-2 hover:scale-105 transition-transform duration-200 hover:shadow-xl">
+            <div className="relative aspect-square w-full overflow-hidden rounded">
                 <Image
                     alt="ecommerce"
                     src={img}
-                    layout='responsive'
-                    height={100}
-                    width={100}
-                    className="object-cover object-center w-full h-full block" />
-            </a>
-            <div className="bg-goldDark border-t-4 border-yellow-500 p-4 flex justify-center">
-                <h2 className="text-textColor text-sm tracking-widest title-font mb-1">
+                    layout="fill"
+                    objectFit="cover"
+                    className="object-center"
+                />
+            </div>
+            <div className="bg-goldDark border-t-4 border-yellow-500 p-4">
+                <h2 className="text-textColor text-sm text-center tracking-widest">
                     {title}
                 </h2>
             </div>

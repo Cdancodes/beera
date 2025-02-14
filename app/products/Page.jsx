@@ -2,6 +2,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import img1 from '@/public/assets/jimg1.png';
 import img2 from '@/public/assets/jimg2.png';
 import img3 from '@/public/assets/jimg3.png';
@@ -13,10 +14,8 @@ import img8 from '@/public/assets/jimg8.png';
 import Card from '../components/cards/Page';
 import Left from '@/public/assets/left.png';
 import Right from '@/public/assets/right.png';
-import Image from 'next/image';
 
-const Page = () => {
-
+const BestsellersPage = () => {
   const data = [
     { img: img1, title: 'NECKLACE MURATO' },
     { img: img2, title: 'NECKLACE MURATO' },
@@ -26,50 +25,57 @@ const Page = () => {
     { img: img6, title: 'NECKLACE MURATO' },
     { img: img7, title: 'NECKLACE MURATO' },
     { img: img8, title: 'NECKLACE MURATO' }
-  ]
+  ];
 
   return (
-    <section className="text-gray-600 body-font bg-defaultColor flex justify-center">
-      <div className="flex flex-col justify-center container px-5 py-24 mx-auto space-y-5">
-
-        <div className="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-          <h1 className="text-sm font-medium title-font mb-2 text-goldMid">FREE SHIPPING FR</h1>
-          <p className="lg:w-1/2 text-2xl font-bold text-textColor w-full leading-relaxed flex justify-center items-center">
-            <div>
+    <section className="text-gray-600 body-font bg-defaultColor">
+      <div className="container px-4 md:px-8 py-12 md:py-24 mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12 md:mb-20">
+          <h2 className="text-sm font-medium text-goldMid mb-4">
+            FREE SHIPPING FR
+          </h2>
+          <div className="flex items-center justify-center space-x-4">
+            <div className="w-16 md:w-24">
               <Image
                 src={Left}
-                alt="left-img"
-                height={100}
+                alt="left decoration"
                 width={100}
-                layout='responsive' />
+                height={100}
+                className="w-full h-auto"
+              />
             </div>
-            <span className='mx-3'> The BestSellers </span>
-            <div>
+            <h1 className="text-xl md:text-2xl font-bold text-textColor">
+              The BestSellers
+            </h1>
+            <div className="w-16 md:w-24">
               <Image
                 src={Right}
-                alt="left-img"
-                height={100}
+                alt="right decoration"
                 width={100}
-                layout='responsive' />
+                height={100}
+                className="w-full h-auto"
+              />
             </div>
-          </p>
+          </div>
         </div>
 
-        <div className="flex flex-wrap -m-2 gap-4 justify-center">
-          {data?.map((item, i) => (
+        {/* Grid Container */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
+          {data.slice(0, 8).map((item, i) => (
             <Card key={i} img={item.img} title={item.title} />
           ))}
         </div>
 
-        <button
-          className='bg-goldMid text-defaultColor mx-auto font-semibold font-serif px-8 py-2'
-        >
-          See All jwellery
-        </button>
-
+        {/* Button */}
+        <div className="text-center mt-12">
+          <button className="bg-goldMid text-defaultColor font-semibold font-serif px-8 py-2 hover:bg-goldDark transition-colors duration-200">
+            See All jewellery
+          </button>
+        </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Page
+export default BestsellersPage;

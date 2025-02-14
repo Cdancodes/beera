@@ -19,7 +19,7 @@ const Accordion = () => {
     ];
 
     return (
-        <div className="w-64 mx-auto space-y-4">
+        <div className="w-full space-y-4">
             {dropdowns.map((dropdown) => (
                 <div key={dropdown.id} className="border-t-2 border-goldMid">
                     <button
@@ -27,7 +27,11 @@ const Accordion = () => {
                         className="flex justify-between items-center w-full p-3 text-goldMid rounded-lg transition hover:shadow-lg"
                     >
                         <span className="text-goldMid">{dropdown.title}</span>
-                        {openDropdown === dropdown.id ? <BiChevronUp size={20} /> : <BiChevronDown size={20} />}
+                        {openDropdown === dropdown.id ? (
+                            <BiChevronUp size={20} />
+                        ) : (
+                            <BiChevronDown size={20} />
+                        )}
                     </button>
                     {openDropdown === dropdown.id && (
                         <div className="mt-2 p-3 bg-goldDark rounded-lg shadow-md">

@@ -15,12 +15,12 @@ import Image from 'next/image';
 const ImageBoard = () => {
 
 
-  
+
 
     return (
-        <section className="text-gray-600 body-font relative">
-            <div className="container mx-auto relative">
-                <div className="flex flex-wrap -m-4">
+        <section className="text-gray-600 body-font relative bg-defaultColor">
+            <div className="container mx-auto relative p-10">
+                <div className="flex flex-wrap -m-4 rounded-2xl shadow-[0_0_20px_5px_rgba(184,134,11,0.25)]">
                     <div className="flex flex-col lg:w-1/2 bg-[#F6F4F2]">
                         <div className="h-full flex flex-col space-y-4 py-[8%] px-[9%]">
                             <p className='text-goldMid'>FREE SHIPPING FR</p>

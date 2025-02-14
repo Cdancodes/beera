@@ -23,7 +23,7 @@ const Navbar = () => {
     { title: "Earrings", path: "/earrings" },
     { title: "Ankle Bracelets", path: "/ankle" },
     { title: "All", path: "/all" },
-    { title: "Track My Order", path: "/order" },
+    { title: "Track My Order", path: "/" },
   ];
 
   useEffect(() => {

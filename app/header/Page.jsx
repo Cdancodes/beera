@@ -11,7 +11,7 @@ const Header = () => {
   const navText = "CHRISTMAS SALE: 2 JEWELERY PURCHASED, THE 3rd FREE! / FREE DELIVERY FR"
 
   return (
-    <header className=" text-gray-600 body-font bg-gradient-to-r from-goldDark via-goldMid to-goldDark py-2 ">
+    <header className=" text-gray-600 body-font hidden md:block bg-gradient-to-r from-goldDark via-goldMid to-goldDark py-2 ">
       <div className="container mx-auto flex flex-wrap px-5 flex-col md:flex-row items-center">
         <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
           <span className="ml-3 text-xl"></span>
