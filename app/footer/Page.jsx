@@ -123,7 +123,7 @@ const Footer = () => {
           {/* Contact Section */}
           <div>
             <h2 className="font-semibold text-goldMid tracking-widest text-md mb-6">ABOUT US</h2>
-            <div className="space-y-3">
+            <div className="space-y-3 flex flex-col">
               <p className="text-gray-600 hover:scale-110 inline-block transition-transform duration-200 hover:text-goldMid cursor-pointer">
                 <strong>Email: </strong> berra_jewel@gmail.com
               </p>
