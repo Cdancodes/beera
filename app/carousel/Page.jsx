@@ -4,6 +4,7 @@
 import Img from "@/public/assets/car1.png";
 import Image from "next/image";
 import { Grandiflora_One, Poppins } from "next/font/google";
+import CustomButton from '../components/customButton/page';
 
 const grandifloraOne = Grandiflora_One({
   subsets: ["latin"],
@@ -49,7 +50,8 @@ const ImageCarousel = () => {
               An example of intricate workmanship and detail, elegant necklaces and long and short chains form a part of our desirable collection.
             </p>
 
-            <button className="bg-[#CFA500] hover:text-defaultColor text-white px-4 text-thin py-2  hover:scale-110 inline-block transition-transform duration-200 cursor-pointer">Discover the jewellery</button>
+            <CustomButton text="Discover the jewellery"/> 
+
           </div>
         </div>
       </div>

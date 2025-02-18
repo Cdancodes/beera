@@ -14,6 +14,7 @@ import img8 from '@/public/assets/jimg8.png';
 import Card from '../components/cards/Page';
 import Left from '@/public/assets/left.png';
 import Right from '@/public/assets/right.png';
+import CustomButton from '../components/customButton/page';
 
 const BestsellersPage = () => {
   const data = [
@@ -69,9 +70,10 @@ const BestsellersPage = () => {
 
         {/* Button */}
         <div className="text-center mt-12">
-          <button className="bg-goldMid text-defaultColor font-semibold font-serif px-8 py-2 hover:bg-goldDark transition-colors duration-200">
-            See All jewellery
-          </button>
+          <CustomButton text="See All jewellery" />
+          {/* <button className="bg-goldMid text-defaultColor font-semibold font-serif px-8 py-2 hover:bg-goldDark transition-colors duration-200">
+            
+          </button> */}
         </div>
       </div>
     </section>
