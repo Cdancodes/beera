@@ -94,6 +94,7 @@ const Footer = () => {
 
           {/* Menu Section */}
           <div>
+<<<<<<< Updated upstream
             <h2 className="font-semibold text-goldMid tracking-widest text-md mb-6">MENU</h2>
             <ul className="space-y-3">
               {NavItems.map((item, i) => (
@@ -102,6 +103,17 @@ const Footer = () => {
                     {item.title}
                   </a>
                 </li>
+=======
+            <h2 className={headsty}>MENU</h2>
+            <ul className="flex flex-col space-y-3">
+              {NavItems.map((item, i) => (
+                <a
+                  key={i}
+                  href={item.path}
+                    className={sty}>
+                  {item.title}
+                </a>
+>>>>>>> Stashed changes
               ))}
             </ul>
           </div>
