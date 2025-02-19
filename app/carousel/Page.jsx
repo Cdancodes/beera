@@ -45,7 +45,6 @@ const ImageCarousel = () => {
               FINESSE
             </h2>
 
-
             <p className={` ${poppins.className} w-[70%] break-words text-xs md:text-sm text-slate-300 font-light tracking-wider`}>
               An example of intricate workmanship and detail, elegant necklaces and long and short chains form a part of our desirable collection.
             </p>

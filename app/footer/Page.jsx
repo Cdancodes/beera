@@ -6,6 +6,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { BiSolidPlane, BiSupport } from 'react-icons/bi';
 import { AiOutlineReload } from 'react-icons/ai';
 import { MdPrivacyTip } from 'react-icons/md';
+import Link from 'next/link';
 
 const Footer = () => {
 
@@ -23,23 +24,37 @@ const Footer = () => {
     }
   ];
 
-
   const NavItems = [
-    { title: "Home", path: "#" },
-    { title: "Necklaces", path: "#" },
-    { title: "Bracelets", path: "#" },
-    { title: "Rings", path: "#" },
-    { title: "Earrings", path: "#" },
-    { title: "Ankle Bracelets", path: "#" },
-    { title: "All", path: "#" },
+    { title: "Home", path: "/" },
+    { title: "Necklaces", path: "/necklace" },
+    { title: "Bangles", path: "/bangles" },
+    { title: "Rings", path: "/ring" },
+    { title: "Earrings", path: "/earrings" },
+    { title: "Ankle Bracelets", path: "/ankle" }
   ];
 
   const services = [
-    { icon: <BiSolidPlane className="w-8 h-8 md:w-10 md:h-10 text-defaultColor" />, title: "FREE TRACKED DELIVERY" },
-    { icon: <AiOutlineReload className="w-8 h-8 md:w-10 md:h-10 text-defaultColor" />, title: "QUICK RETURNS AND EXCHANGE" },
-    { icon: <BiSupport className="w-8 h-8 md:w-10 md:h-10 text-defaultColor" />, title: "24X7 CUSTOMER SERVICE" },
-    { icon: <MdPrivacyTip className="w-8 h-8 md:w-10 md:h-10 text-defaultColor" />, title: "100% SECURE PAYMENT" },
+    {
+      icon: <BiSolidPlane className="w-8 h-8 md:w-10 md:h-10 text-defaultColor" />,
+      title: "FREE TRACKED DELIVERY"
+    },
+    {
+      icon: <AiOutlineReload className="w-8 h-8 md:w-10 md:h-10 text-defaultColor" />,
+      title: "QUICK RETURNS AND EXCHANGE"
+    },
+    {
+      icon: <BiSupport className="w-8 h-8 md:w-10 md:h-10 text-defaultColor" />,
+      title: "24X7 CUSTOMER SERVICE"
+    },
+    {
+      icon: <MdPrivacyTip className="w-8 h-8 md:w-10 md:h-10 text-defaultColor" />,
+      title: "100% SECURE PAYMENT"
+    },
   ];
+
+  const sty = "text-gray-600 hover:scale-110 inline-block transition-transform duration-200 hover:text-goldMid cursor-pointer";
+
+  const headsty = "font-semibold text-goldMid tracking-widest text-md mb-6"
 
   return (
     <footer className="relative text-gray-600 bg-footerColor w-full">
@@ -94,11 +109,11 @@ const Footer = () => {
 
           {/* Menu Section */}
           <div>
-            <h2 className="font-semibold text-goldMid tracking-widest text-md mb-6">MENU</h2>
+            <h2 className={headsty}>MENU</h2>
             <ul className="space-y-3">
               {NavItems.map((item, i) => (
                 <li key={i}>
-                  <a className="text-gray-600 hover:scale-110 inline-block transition-transform duration-200 hover:text-goldMid cursor-pointer">
+                  <a className={sty}>
                     {item.title}
                   </a>
                 </li>
@@ -108,11 +123,11 @@ const Footer = () => {
 
           {/* Social Links Section */}
           <div>
-            <h2 className="font-semibold text-goldMid tracking-widest text-md mb-6">FOLLOW US ON</h2>
+            <h2 className={headsty}>FOLLOW US ON</h2>
             <ul className="space-y-3">
               {SocialIcons.map((item, i) => (
                 <li key={i}>
-                  <a className="text-gray-600 hover:scale-110 inline-block transition-transform duration-200 hover:text-goldMid cursor-pointer">
+                  <a className={sty}>
                     {item.title}
                   </a>
                 </li>
@@ -121,15 +136,30 @@ const Footer = () => {
           </div>
 
           {/* Contact Section */}
-          <div>
-            <h2 className="font-semibold text-goldMid tracking-widest text-md mb-6">ABOUT US</h2>
-            <div className="space-y-3 flex flex-col">
-              <p className="text-gray-600 hover:scale-110 inline-block transition-transform duration-200 hover:text-goldMid cursor-pointer">
-                <strong>Email: </strong> berra_jewel@gmail.com
-              </p>
-              <p className="text-gray-600 hover:scale-110 inline-block transition-transform duration-200 hover:text-goldMid cursor-pointer">
-                <strong>Phone: </strong> +91 123456789
-              </p>
+          <div className='space-y-4'>
+            <div>
+              <h2 className={headsty}>ABOUT US</h2>
+              <div className="space-y-3 flex flex-col">
+                <p className={sty}>
+                  <strong>Email: </strong> berra_jewel@gmail.com
+                </p>
+                <p className={sty}>
+                  <strong>Phone: </strong> +91 4756778751
+                </p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className={headsty}>
+                SERVICES
+              </h2>
+              <ul>
+                <li className={sty}>
+                  <Link href="/terms">
+                    Terms & Conditions
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
