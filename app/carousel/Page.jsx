@@ -39,13 +39,13 @@ const ImageCarousel = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent">
           <div className="absolute left-0 w-full md:w-[50%] top-1/2 transform -translate-y-1/2 text-white p-8 space-y-4">
 
-            <h2 className={`${grandifloraOne.className} text-3xl md:text-5xl font-grandiflora mb-0 md:mb-4 text-[#CFA500] leading-tight md:leading-[3rem]`}>
+            <h2 className={`${grandifloraOne.className} text-sm md:text-5xl font-grandiflora mb-0 md:mb-4 text-[#CFA500] leading-tight md:leading-[3rem]`}>
               IMPECCABLE
               <span className="block md:my-4">CRAFTSMANSHIP AND</span>
               FINESSE
             </h2>
 
-            <p className={` ${poppins.className} w-[70%] break-words text-xs md:text-sm text-slate-300 font-light tracking-wider`}>
+            <p className={` ${poppins.className} hidden md:block w-[70%] break-words text-xs md:text-sm text-slate-300 font-light tracking-wider`}>
               An example of intricate workmanship and detail, elegant necklaces and long and short chains form a part of our desirable collection.
             </p>
 

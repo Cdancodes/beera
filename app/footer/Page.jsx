@@ -59,7 +59,7 @@ const Footer = () => {
   return (
     <footer className="relative text-gray-600 bg-footerColor w-full">
       {/* Services Banner */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[80%]">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] md:w-[80%] hidden lg:block">
         <div className="bg-gradient-to-r from-goldMid via-goldMid to-goldDark p-4 md:p-6 rounded-lg shadow-xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {services.map((service, i) => (
